@@ -1,0 +1,21 @@
+import pandas as pd
+
+# Dados extraídos
+dados = [
+{"USER_ID": 1, "NOME": "João Sem-Terra", "IDADE": 45, "CIDADE": "São Paulo", "AGÊNCIA": "0001-1", "CONTA": 333, "CARTÃO": "***107"},
+    {"USER_ID": 2, "NOME": "Marcus Junius", "IDADE": 30, "CIDADE": "Rio de Janeiro", "AGÊNCIA": "0005-3", "CONTA": 783, "CARTÃO": "***134"},
+    {"USER_ID": 3, "NOME": "Laura Crona", "IDADE": 22, "CIDADE": "Brasília", "AGÊNCIA": "0004-9", "CONTA": 989, "CARTÃO": "***148"}
+]
+
+df = pd.DataFrame(dados)
+
+
+# Transformação: adicionar coluna "faixa_etaria"
+df["FAIXA_ETÁRIA"] = df["IDADE"].apply(lambda x: "Jovem" if x < 26 else "Adulto")
+
+print(df)
+
+# Carregar em CSV
+df.to_csv("projeto_ETL.csv", index=False, encoding="utf-8")
+
+print("Arquivo CSV gerado com sucesso!")
