@@ -1,5 +1,5 @@
 import pandas as pd
-commit antes do clone - remoto
+commit depois do clone - remoto
 # Dados extraídos
 dados = [
 {"USER_ID": 1, "NOME": "João Sem-Terra", "IDADE": 45, "CIDADE": "São Paulo", "AGÊNCIA": "0001-1", "CONTA": 333, "CARTÃO": "***107"},
